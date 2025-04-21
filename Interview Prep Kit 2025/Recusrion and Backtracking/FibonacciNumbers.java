@@ -1,7 +1,9 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FibonacciNumbers {
 
+    // Plain Recursion
     // Classic Recursion for smaller values of n
     public static int fibonacci(int n) {
         if (n == 0)
@@ -12,6 +14,7 @@ public class FibonacciNumbers {
             return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
+    // Bottom-Up DP (Tabulation)
     // Dynamic Programming solution with memoization for larger values of n (Without
     // Recursion)
     // Time Complexity: O(n); Space Complexity: O(n)
@@ -30,6 +33,7 @@ public class FibonacciNumbers {
         return dp[n];
     }
 
+    // Optimized Bottom-Up (2 vars)
     // Dynamic Programming solution with memoization for larger values of n (Without
     // Recursion)
     // Time Complexity: O(n); Space Complexity: O(1)
@@ -49,6 +53,7 @@ public class FibonacciNumbers {
         return b;
     }
 
+    // Top-Down DP (Memoization)
     // Dynamic Programming solution with memoization for larger values of n (With
     // Recursion)
     // O(n) Space; O(n) Time
@@ -75,6 +80,8 @@ public class FibonacciNumbers {
         System.out.println(fibonacciO1(n)); // DP O(1) Space
 
         // DP with Recursion
-
+        int[] memo = new int[n + 1];
+        Arrays.fill(memo, -1);
+        System.out.println(fibonacciRec(n, memo));
     }
 }
