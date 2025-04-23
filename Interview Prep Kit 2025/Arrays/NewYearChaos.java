@@ -1,5 +1,3 @@
-package Arrays;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,8 +9,8 @@ public class NewYearChaos {
 
         for (int i = 0; i < q.size(); i++) {
 
-            int current = q.get(i);
-            if (current - (i + 1) > 2) {
+            int current = q.get(i); // 5 i= 4
+            if (current - (i + 1) > 2) { // 5 - 5 !> 2
                 System.out.println("Too chaotic");
                 return;
             }

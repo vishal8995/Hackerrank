@@ -1,0 +1,3 @@
+The Tree section in Hackerrank is buggy, as there are no Main Class implementations.
+
+So self written construct Tree methods work for only a handful of test cases, which expect a built in Main implementation.
